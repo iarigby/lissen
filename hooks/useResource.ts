@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const backendUrl = 'https://lissen-be.coolify.bitscomplicated.com'
+const backendUrl = process.env.EXPO_PUBLIC_BACKEND_URL
 
 export type NetworkRequest<T> = [T, string | undefined, boolean]
 
