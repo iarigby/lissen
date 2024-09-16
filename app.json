@@ -14,6 +14,13 @@
     },
     "ios": {
       "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
+      "bundleIdentifier": "com.iarigby.lissen"
     },
     "android": {
       "adaptiveIcon": {
