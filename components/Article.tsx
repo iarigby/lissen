@@ -2,7 +2,7 @@ import {Image, ScrollView, StyleSheet} from "react-native";
 import {Player} from "@/components/Player";
 import {Article} from "@/resources/article";
 import {ThemedView} from "@/components/ThemedView";
-import {ThemedText} from "@/components/ThemedText";
+import {ThemedText, ThemedTextInput} from "@/components/ThemedText";
 
 export function ArticleView({article}: {article: Article}) {
     return <ThemedView style={styles.articleContainer}>
@@ -13,9 +13,9 @@ export function ArticleView({article}: {article: Article}) {
         <Player audioURI={article.sourceAudioURL}></Player>
         <ScrollView style={{padding: 10, marginBottom: 50}}>
             <ThemedView style={styles.articleBody}>
-                <ThemedText style={styles.articleContent}>{article.description}</ThemedText>
+                <ThemedTextInput multiline editable={false} style={styles.articleContent}>{article.description}</ThemedTextInput>
                 <ThemedView style={{margin: 20}}></ThemedView>
-                <ThemedText style={styles.articleContent}>{article.content}</ThemedText>
+                <ThemedTextInput multiline editable={false} style={styles.articleContent}>{article.content}</ThemedTextInput>
             </ThemedView>
         </ScrollView>
     </ThemedView>
